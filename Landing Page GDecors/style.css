@@ -4,32 +4,30 @@
     --accent-gold: #C5A059;   
     --text-dark: #333333;
     --text-white: #ffffff;
-    --bg-light: #f9f9f7; /* Gue ganti dikit biar lebih warm */
+    --bg-light: #f9f9f7; 
     --bg-white: #ffffff;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
 html {
-    scroll-behavior: smooth; /* Ini kunci buat scroll halus */
-}
+    scroll-behavior: smooth; 
 
 .bg-decoration {
     position: fixed;
     font-size: 15rem;
-    opacity: 0.45; /* Sangat tipis biar elegan */
+    opacity: 0.45; 
     top: 20%;
     left: -50px;
     transform: rotate(45deg);
     z-index: -1;
-    pointer-events: none; /* Biar gak ganggu klik mouse */
+    pointer-events: none; 
     filter: grayscale(100%);
 }
 
-/* Biar pas scroll gak kepotong Navbar yang Sticky */
 section {
-    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar lo */
+    scroll-margin-top: 80px; 
 }
-/* Background dikasih gradasi halus biar gak boring */
+
 body { 
     background: radial-gradient(circle at top right, var(--bg-white), var(--bg-light)); 
     color: var(--text-dark); 
@@ -40,7 +38,7 @@ body {
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
     padding: 15px 10%; background: rgba(255, 255, 255, 0.95); 
-    backdrop-filter: blur(10px); /* Tambah blur dikit biar modern */
+    backdrop-filter: blur(10px); 
     position: sticky; top: 0; z-index: 1000;
     box-shadow: 0 2px 15px rgba(0,0,0,0.03);
 }
@@ -56,7 +54,7 @@ body {
 .btn-signup:hover { background: var(--accent-gold); transform: translateY(-2px); }
 
 /* --- HERO SECTION --- */
-.hero { padding: 15px 2% 40px 2%; } /* Kurangi padding bawah */
+.hero { padding: 15px 2% 40px 2%; } 
 .hero-card {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/decor head.jpg');
     background-size: cover; background-position: center; height: 600px;
@@ -107,7 +105,7 @@ body {
 .cat-card:hover p { color: var(--accent-gold); }
 
 /* --- ABOUT US --- */
-.about-us { padding: 100px 4% 60px 4%; } /* Padding dikurangi */
+.about-us { padding: 100px 4% 60px 4%; } 
 .about-container {
     background: var(--primary-green); border-radius: 40px;
     display: flex; align-items: center; position: relative; overflow: visible;
@@ -133,7 +131,6 @@ body {
 
 .about-img { flex: 1; text-align: right; z-index: 10; position: relative; }
 
-/* --- TETAP SESUAI SETINGAN LO --- */
 .about-img img { 
     width: 75%; 
     transform: scale(1.35) translateY(-35px) translateX(-41px); 
@@ -145,7 +142,6 @@ body {
 /* --- SIGN UP SECTION: GLASSMORPHISM --- */
 .signup-section {
     padding: 120px 10%;
-    /* Pakai gradient lembut biar kontras sama kacanya kelihatan */
     background: radial-gradient(circle at center);
     display: flex;
     justify-content: center;
@@ -153,7 +149,6 @@ body {
     position: relative;
 }
 
-/* Kotak Form Langsung Jadi Kaca */
 .signup-container {
     max-width: 500px;
     width: 100%;
@@ -161,12 +156,10 @@ body {
     
     /* EFEK KACA TRANSPARAN */
     background: rgba(255, 255, 255, 0.15); /* Transparansi tinggi */
-    backdrop-filter: blur(5px); /* Blur lebih kuat biar premium */
+    backdrop-filter: blur(5px); 
     -webkit-backdrop-filter: blur(20px);
-    
-    /* Border tipis biar bentuk kacanya kelihatan */
     border: 1px solid rgba(4, 47, 23, 0.4);
-    border-radius: 40px; /* Sudut super tumpul biar estetik */
+    border-radius: 40px; 
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
     z-index: 10;
 }
@@ -202,7 +195,6 @@ body {
 .form-group input {
     width: 100%;
     padding: 16px 16px 16px 55px;
-    /* Input juga transparan dikit */
     background: rgba(255, 255, 255, 0.5); 
     border: 1px solid rgba(54, 47, 6, 0.3);
     border-radius: 15px;
@@ -238,7 +230,6 @@ body {
     box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
 }
 
-/* Tambah ornamen biar gak sepi di belakang kacanya */
 .signup-section::after {
     content: '';
     position: absolute;
@@ -258,7 +249,7 @@ body {
     }
 }
 
-/* --- NEW PROFESSIONAL FOOTER --- */
+/* --- FOOTER --- */
 .footer {
     background: var(--primary-green);
     color: #ffffff;
@@ -275,7 +266,7 @@ body {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr; /* Brand dapet area lebih luas */
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 80px;
     margin-bottom: 60px;
 }
@@ -314,7 +305,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
     text-decoration: none;
-    border-radius: 12px; /* Kotak tumpul (ngikutin style card lo) */
+    border-radius: 12px; 
     font-size: 1.2rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -355,7 +346,7 @@ body {
 .footer-col ul li a:hover {
     opacity: 1;
     color: var(--accent-gold);
-    padding-left: 8px; /* Animasi geser dikit */
+    padding-left: 8px; 
 }
 
 .footer-col p {
@@ -368,7 +359,7 @@ body {
 }
 
 .footer-col p i {
-    color: var(--accent-gold); /* Icon contact dikasih warna gold */
+    color: var(--accent-gold); 
 }
 
 /* --- BOTTOM BAR --- */
@@ -383,10 +374,6 @@ body {
     opacity: 0.4;
     letter-spacing: 1px;
 }
-
-/* ============================================================
-   KHUSUS MOBILE (GAK AKAN NGURUSAK DESKRIPSI DESKTOP LO)
-   ============================================================ */
 
 @media (max-width: 768px) {
     /* 1. Navbar: Biar gak meluber ke samping */
@@ -408,10 +395,9 @@ body {
     }
 
     .nav-auth {
-        display: none !important; /* Login ilangin di HP biar gak sesak */
+        display: none !important; 
     }
 
-    /* 2. Hero: Biar judul gak nabrak pinggiran */
     .hero {
         padding-top: 130px !important;
     }
@@ -454,19 +440,17 @@ body {
 
     .hero-btns {
         display: flex !important;
-        flex-direction: column !important; /* Tombol tumpuk biar gak sempit */
+        flex-direction: column !important; 
         gap: 12px !important;
         width: 100% !important;
         align-items: center !important;
     }
 
     .btn-primary, .btn-secondary {
-        width: 80% !important; /* Tombol jadi lebar biar enak di-klik jempol */
+        width: 80% !important; 
         margin: 0 auto !important;
     }
     
-
-    /* 3. Grid & Column: Paksa semua tumpuk ke bawah */
     .beyond-container, .category-grid, .footer-top {
         display: flex !important;
         flex-direction: column !important;
@@ -479,7 +463,6 @@ body {
         margin: 0 auto;
     }
 
-    /* 4. ABOUT US: INI BIAR GAK RUSAK LAGI */
     .about-container {
         flex-direction: column !important;
         border-radius: 25px !important;
@@ -491,12 +474,11 @@ body {
         width: 100% !important;
         height: auto !important;
         margin: 0 !important;
-        order: -1 !important; /* Gambar pindah ke atas teks */
-    }
+        order: -1 !important;
 
     .about-img img {
         width: 100% !important;
-        transform: none !important; /* MATIIN TRANSLATE YANG BIKIN MELUBER */
+        transform: none !important; 
         position: static !important;
         border-radius: 25px 25px 0 0 !important;
         box-shadow: none !important;
@@ -514,8 +496,7 @@ body {
         font-size: 1.8rem !important;
     }
 
-    /* 5. Footer Sosmed biar di tengah */
     .footer-socials {
         justify-content: center !important;
     }
-}
+}}}
